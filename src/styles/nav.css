@@ -1,0 +1,130 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.d-block {
+  display: block;
+}
+
+.justify-content-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.justify-content-around {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.justify-content-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.justify-content-end {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.justify-content-start {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.align-items-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex-row {
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: row !important;
+          flex-direction: row !important;
+}
+
+.container {
+  max-width: 1920px;
+  padding: 0px 5%;
+  margin: 0 auto;
+  display: inline-block;
+  width: 100%;
+}
+
+.nav_header_links {
+  width: 35%;
+}
+
+.nav_header_links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav_header_links .profile_img {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+}
+
+.nav_header_links .Search-container {
+  position: relative;
+}
+
+.nav_header_links .Search-container input {
+  padding: 12px 9px;
+  width: 250px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: none;
+  border-radius: 5px;
+}
+
+.nav_header_links .Search-container .Search-icon {
+  position: absolute;
+  right: 0;
+}
+
+.Icon {
+  -webkit-transition: .6s;
+  transition: .6s;
+  border-radius: 5px;
+  padding: 5px 5px 0 5px;
+  position: relative;
+  cursor: pointer;
+}
+
+.Icon span {
+  position: absolute;
+  bottom: -35px;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 5px 9px;
+  border-radius: 5px;
+  left: -40%;
+  display: none;
+}
+
+.Icon:hover {
+  background-color: #13BEFF;
+}
+
+.Icon:hover span {
+  display: block;
+}
+/*# sourceMappingURL=nav.css.map */
