@@ -1,18 +1,16 @@
-import React , {useState , useEffect ,useContext} from 'react'
+import React , {useState} from 'react'
 
 ///// import elements from material ui 
-import { makeStyles } from '@material-ui/core/styles';
-import { Grid} from '@material-ui/core';
+import { Grid ,Typography} from '@material-ui/core';
 
 //// global state
 import { useNews  } from '../../contexts/NewsState'
 
 ////////components 
 import NewsCard from "../../components/home/newsCard/newsCard"
-import Nav from"../../components/nav/nav"
-
-
-
+import HelpedSection from "../../components/home/helpedSection/helpedSection"
+import Slider from "../../components/home/slider/slider"
+import Header from "../../components/Header/header"
   function Home() {
     const [loading, setLoading] = useState(false);
      const news = useNews();
@@ -26,20 +24,29 @@ import Nav from"../../components/nav/nav"
 
     return (
         <div>
-         <Nav/> 
-         <Grid   container spacing={4}> 
-          
-          {news && news.HomeItems.map((element)=>(
-            <Grid key={element.id} item xs={12} sm={6} md={3} lg={3}>
-              <NewsCard
-                 element={element}
-              />
-            </Grid>
-          ))}
-              
-         </Grid>
+        {/* ///////////////////////////slider////////////// */}
+        <Slider/>
+     {/* //////////////////////////////latest news////////// */}
+        <div className="container">
+              <Grid   container spacing={4}> 
+              <Grid   item xs={12} sm={6} md={12} lg={12}>
+                  <Header>
+                    latest News
+                  </Header>
+              </Grid>
+
+                {news && news.HomeItems.map((element)=>(
+                  <Grid key={element.id} item xs={12} sm={6} md={4} lg={4}>
+                    <NewsCard
+                      element={element}
+                    />
+                  </Grid>
+                ))}
+                    
+              </Grid>
+          </div>
                 
-          
+          <HelpedSection/>
 
          </div>
     )

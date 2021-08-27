@@ -13,6 +13,6 @@ export const createAPIEndpoint = endpoint => {
     let url = BASE_URL + endpoint ;
     return {
         fetchAll: () => axios.get(url ),
-        fetchById: id => axios.get(url + id),
+        // fetchById: id => axios.get(url + id),
     }
 }

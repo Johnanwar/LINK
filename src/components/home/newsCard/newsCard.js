@@ -1,11 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
- import Typography from '@material-ui/core/Typography';
+import { Box, Card, Typography,CardActionArea, CardContent ,CardMedia , } from "@material-ui/core";
  import DateRangeIcon from '@material-ui/icons/DateRange';
 import { Link } from "react-router-dom"
 ///// components
@@ -16,10 +11,37 @@ const useStyles = makeStyles({
   root: {
     width: '100%',
     height: '100%',
+    boxShadow:"0 3px 6px #eee",
   },
   media: {
-    height: 140,
+    height: '220px',
   },
+  Card_Content:{
+    padding:"0 14px",
+    "& a":{
+      color:'#000',
+    "& h2":{
+      height:"112px",
+      textOverflow:"ellipsis",
+      overflow:"hidden",
+      fontSize: '16px',
+     },
+    },
+    "& p":{
+      height:"92px",
+      textOverflow:"ellipsis",
+      textOverflow:"hidden"
+    },
+    "& .news_Category":{
+      color:"#000",
+      backgroundColor:"#e3e3e3",
+      width:"max-content",
+      padding:"4px",
+      borderRadius:"5px",
+      margin:"10px 0"
+    }
+  }
+
 });
 function NewsCard({element}) {
     const classes = useStyles();
@@ -36,23 +58,27 @@ function NewsCard({element}) {
         </CardActionArea>
       </Link>
        
-        <CardContent>
-               {/* ///////////////// share button */}
-        <CardActions className="justify-content-end"  >
+        <CardContent className={classes.Card_Content}>
+        <Box alignContent="flex-end"  display="flex" className="justify-content-end" pb={0}  pt=".5rem">
             <AddToWishlist element={element}/>
            <SosialShare/>
-        </CardActions>
-            <Typography gutterBottom variant="h6" component="h2">
-                {element.title}
-            </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-                {element.description} 
-            </Typography>
+        </Box>
+        <Link to={`/NewsDetails/${element.id}`}>
+              <Typography  gutterBottom variant="h6" component="h2">
+                  {element.title}
+              </Typography>
+        </Link>
+        <Typography className="news_Category"  variant="body2" color="textSecondary" component="h6">
+            Category
+        </Typography>
+        <Typography  variant="body2" color="textSecondary" component="p">
+          {element.description} 
+         </Typography>
 
-            <Typography variant="body2" color="textSecondary" component="p" className="d-flex align-items-center">
-             <DateRangeIcon color="secondary" m={2}/> 
-            <span> {element.publishedAt &&  (element.publishedAt).slice(0,10)} </span>
-           </Typography>
+        <Typography variant="body2" color="textSecondary" component="h6" gutterBottom className="d-flex align-items-center">
+            <DateRangeIcon color="secondary"/> 
+             <span> {element.publishedAt &&  (element.publishedAt).slice(0,10)} </span>
+        </Typography>
        </CardContent>
        
         

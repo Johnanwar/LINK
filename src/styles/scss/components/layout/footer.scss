@@ -1,0 +1,52 @@
+footer{
+  .footer-top{
+    background-color: #D9D9D9;
+  }
+  .footer-bottom{
+    background-color: $mainColor;
+    color: white;
+  }
+
+  a{
+    text-decoration: none;
+    color: #565960;
+  }
+
+  form{
+    label{
+      font-size: 20px;
+      color: #565960;
+    }
+    input,
+    button{
+      padding: .7rem;
+      border: none;
+      font-size: 18px;
+      &:focus{
+           outline: none;
+      }
+      &::placeholder{
+        color: #565960;
+      }
+    }
+
+    button{
+      background-color: $secondColor;
+      color: white;
+      cursor: pointer;
+    }
+  }
+  .footer-social-icons{
+    p{
+      color:#565960;
+      margin-bottom: 10px;
+    }
+    ul{
+      display: flex;
+      list-style: none;
+    li{
+      padding: 10px;
+    }
+  }
+  }
+}

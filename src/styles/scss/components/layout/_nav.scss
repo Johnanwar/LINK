@@ -1,0 +1,211 @@
+
+.nav-container{
+  z-index: 9999999999;
+  height: 68px;
+  .logo-img{
+    margin: 0 95px;
+  }
+.nav_header_links{
+  width: 35%;
+  Icon {
+    color: #fff;
+    text-decoration: none;
+  }
+  .profile-nav-container a{
+    color: #fff;
+  }
+  .profile_img{
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+  }
+  .Search-containe-main{
+    position: relative;
+    // width:7%;
+    .Search-container{
+      position: absolute;
+      top: -20px;
+      right: -15px;
+       input{
+        padding: 12px 9px;
+        width: 250px;
+        background-color: rgba(0,0,0,0.3);
+        border: none;
+        border-radius: 5px;
+     }
+    .Search-icon{
+     position: absolute;
+     right: 0;
+     top:8px;
+     cursor: pointer;
+    }
+    }
+   
+    }
+  }
+  .Icon{
+    transition: .6s;
+    border-radius: 5px;
+    padding: 5px 5px 0 5px;
+    position: relative;
+    cursor: pointer;
+    span{
+      position: absolute;
+      bottom: -35px;
+      background-color: rgba(0,0,0,.2);
+      padding: 5px 9px;
+      border-radius: 5px;
+      left: -40%;
+      display: none;
+    }
+  
+  }
+  .Setting-icon{
+    transition: .6s;
+    border-radius: 5px;
+    padding: 15px 5px 0 5px;
+    position: relative;
+    cursor: pointer;
+    span{
+      position: absolute;
+      bottom: -35px;
+      background-color: rgba(0,0,0,.2);
+      padding: 5px 9px;
+      border-radius: 5px;
+      left: -40%;
+      display: none;
+    }
+  }
+  .setting-hover:hover{
+    background-color: $secondColor;
+  }
+  .setting-hover:hover span{
+    display: block;;
+  }
+  .Icon:hover {
+    background-color: $secondColor;
+  }
+  .Icon:hover span{
+    display: block;;
+  }
+}
+.setting-container{
+  background-color: $thirdColor;
+  position: absolute;
+  top: 41px;
+  width: 247px;
+  right: -1px;
+  border-radius: 5px;
+  box-shadow: 1px 2px 2px $forthColor;
+ 
+  .setting-part{
+    border-bottom: 1px solid  $forthColor;
+    font-family: $mainFont;
+    font-size: 18px;
+    padding: 9px 15px;
+    p{
+      color: $forthColor;
+    }
+    ul{
+      list-style: none;
+    }
+    li{
+      color: #000;
+      padding: 7px 0;
+      h2{
+        margin-right: 10px;
+        margin-bottom: 0;
+      }
+      button{
+        display: block;
+    width: 100%;
+    text-align: left;
+      }
+    }
+  }
+
+} 
+ .notfication-container{
+  max-height: 50vh;
+  overflow-y: auto;
+  p{
+    color: $forthColor;
+    padding: 15px 15px 0px 15px;
+   }
+  .notfication-part{
+    border-bottom: 1px solid  $forthColor;
+    font-family: $mainFont;
+    font-size: 18px;
+    padding: 15px;
+  }
+  .view-all-notfications{
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    svg{
+      transition: .5s;
+      font-size: 30px;
+    }
+  }
+  .view-all-notfications:hover svg{
+    transform: scaleX(1.4);
+    transform-origin: left;
+  }
+}
+.right-nav-container{
+  position: fixed;
+  top: 68px;
+  left: 0;
+  width: 600px;
+  background-color: $mainColor;
+  z-index: 99999999999;
+}
+.social-icons{
+  width: 20%;
+  border-right: .5px solid rgba(255,255,255,.2);
+  height: calc(100vh -  68px);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 80px;
+  ul{
+    list-style: none; 
+    li{
+      padding: 15px 0;
+      a{
+        color: #fff;
+      }
+    }
+  } 
+}
+.right-nav-links{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+   justify-content: space-between;
+  padding-bottom: 80px;
+  padding: 20px 0px 80px 50px;
+  .right-nav-main-link{
+    color: #fff;
+    font-family: $boldFont;
+    font-size: 24px;
+  }
+  .activLink{
+    color:$thirdColor
+  }
+  .right-nav-links-link{
+    color:#eee;
+    font-family: $mainFont;
+  }
+  .right-nav-links-part{
+    display: flex;
+    flex-direction: column;
+    .right-nav-links-link{
+      padding: 10px 0;
+    }
+
+  }
+}

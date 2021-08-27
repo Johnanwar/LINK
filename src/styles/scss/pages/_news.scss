@@ -1,0 +1,13 @@
+.all-news-container{
+    background-color: #efefef;
+    .Breadcrumbs-container{
+        margin-top: 25px;
+        a{
+            text-decoration: none;
+        };
+        .disabled-link{
+           color: #ccc;
+           cursor:no-drop;
+        }
+    }
+}
