@@ -1,7 +1,7 @@
-import React , {useState} from 'react'
+import React from 'react'
 
 ///// import elements from material ui 
-import { Grid ,Typography} from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 
 //// global state
 import { useNews  } from '../../contexts/NewsState'
@@ -11,17 +11,9 @@ import NewsCard from "../../components/home/newsCard/newsCard"
 import HelpedSection from "../../components/home/helpedSection/helpedSection"
 import Slider from "../../components/home/slider/slider"
 import Header from "../../components/Header/header"
-  function Home() {
-    const [loading, setLoading] = useState(false);
+
+function Home() {
      const news = useNews();
- 
-   
-
-
-
-// ......................................................................................................
-
-
     return (
         <div>
         {/* ///////////////////////////slider////////////// */}
@@ -29,7 +21,7 @@ import Header from "../../components/Header/header"
      {/* //////////////////////////////latest news////////// */}
         <div className="container">
               <Grid   container spacing={4}> 
-              <Grid   item xs={12} sm={6} md={12} lg={12}>
+              <Grid   item xs={12} sm={12} md={12} lg={12}>
                   <Header>
                     latest News
                   </Header>

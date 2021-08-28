@@ -1,12 +1,13 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import './i18n';
 import ReactDOM from 'react-dom';
- import App from './pages/app/App';
- 
+import App from './pages/app/App';
+import {NewsProvider} from './contexts/NewsState'
+
 ReactDOM.render(
-  <Suspense fallback={(<div>Loading</div>)}>
+  <NewsProvider>
   <App />
-</Suspense>,
+  </NewsProvider> ,
   document.getElementById('root')
 );
 

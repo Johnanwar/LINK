@@ -4,7 +4,9 @@
  export const REMOVE_FROM_WISHLIST = "REMOVE_FROM_WISHLIST";
  export const SORT_ACC = "SORT_ACC";
  export const SORT_DES = "GET_NEWS";
+ export const FILTER_CATEGORY = "FILTER_CATEGORY";
  export const FILTER_DATE = "FILTER_DATE";
  export const SEARCH_FILTER = "SEARCH_FILTER";
+ export const PAGINATE_ITEMS = "PAGINATE_ITEMS";
  
  

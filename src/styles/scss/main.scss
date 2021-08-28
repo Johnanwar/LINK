@@ -1,63 +1,10 @@
- @import "./variables/variables";
- @import "./components/layout/nav";
- @import "./components/layout/footer";
- @import "./fonts/fonts";
- @import "./components/home/helpedSection"; 
- @import "./components/home/slider";
- @import "./pages/newsDetails";
- @import "./pages/news";
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .d-flex{
-    display: flex;
-  }
-  .w-100{
-    width: 100%;
-  }
-  .d-block{
-    display: block;
-  }
-  .justify-content-between{
-    justify-content: space-between;
-  }
-  .justify-content-around{
-    justify-content: space-around;
-  }
-  .justify-content-center{
-    justify-content: center;
-  }
-  .justify-content-end{
-    justify-content: flex-end;
-  }
-  .justify-content-start{
-    justify-content: flex-start;
-  }
-  .align-items-center{
-    align-items: center;
-  }
-  .flex-row{
-   flex-direction: row!important;
-  }
-  .container {
-    max-width: 1920px;
-    padding: 0px 5%;
-    margin: 0 auto;
-    display: inline-block;
-    width: 100%;
-}
-.relative{
-  position: relative;
-}
-.absolute{
-  position: absolute;
-}
-.black{
-  color:#000;
-}
-a{
-  text-decoration:none;
-}
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+@import "./base/reset";
+@import "./base/typography";
+@import "./layout/nav";
+@import "./layout/footer";
+@import "./pages/home";
+@import "./pages/newsDetails";
+@import "./pages/news";
+@import "./components/filter";

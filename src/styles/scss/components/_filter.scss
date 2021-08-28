@@ -1,0 +1,32 @@
+.input-date{
+    width: 100%;
+    padding: 10px;
+    /* border-color: #ccc; */
+    box-shadow: none;
+    border: 1px solid #AFAFAF;
+    min-height: 100%;
+}
+.form-searsh {
+    height: 100%;
+    button{
+     background-color: $secondColor;
+     color:$thirdColor;
+     padding: 10px;
+     border:1px solid  #AFAFAF;
+     box-shadow: unset;
+     padding: 10px 18px 6px;
+    }
+}
+.sort-dropdown {
+    width: 100%;
+    padding: 10px;
+    /* border-color: #ccc; */
+    box-shadow: none;
+    border:none;
+    background-color: transparent; 
+    color: $secondColor;
+}
+.sort-dropdown:focus{
+    background-color: $thirdColor;
+    border:none;
+}

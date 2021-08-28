@@ -1,8 +1,7 @@
 import React from "react"
 import { BrowserRouter as Router ,Switch, Route } from "react-router-dom"
 import {ThemeProvider , createTheme } from '@material-ui/core';
-import {NewsProvider} from '../../contexts/NewsState'
-import '../../styles/scss/main.scss'
+ import '../../styles/scss/main.scss'
 
 ////////////// layout components
 import Nav from"../../components/nav/nav";
@@ -40,8 +39,6 @@ const theme = createTheme({
       }
     }
   },
-  spacing: [0, 2, 3, 5, 8],
-
  })
 
 
@@ -52,9 +49,9 @@ function App({}) {
 
     <div
     className="App"><ThemeProvider theme={theme}>
-         <NewsProvider>
+       
           <Router >
-          <Nav/> 
+           <Nav/> 
               <Switch>
                   <Route exact path="/" component={Home} />   
                   <Route exact path="/NewsDetails/:id" component={NewsDetails} /> 
@@ -63,7 +60,6 @@ function App({}) {
             </Switch>  
             <Footer/>   
           </Router>
-       </NewsProvider> 
       </ThemeProvider>
     </div>
 </>
@@ -72,3 +68,4 @@ function App({}) {
 }
 
 export default App;
+ 

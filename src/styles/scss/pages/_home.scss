@@ -1,0 +1,202 @@
+.slide-design {
+  position: relative;
+  @include responsive(big-desktop) {
+    height: 620px;
+  }
+  @include responsive(phone) {
+    height: 350px;
+  }
+  margin-bottom: 10px;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+    transform: scaleY(1.4);
+  }
+}
+.slide-design::after {
+  background: #757575 none repeat scroll 0 0;
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: 0.55;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -0;
+}
+
+.slider-content {
+  color: #fff;
+  text-align: center;
+  width: max-content;
+  position: absolute;
+  top: 25%;
+  height: 50%;
+  @include responsive(big-desktop) {
+    width: 50% !important;
+    right: 25%;
+  }
+  @include responsive(tab-land) {
+    width: 50% !important;
+    right: 25%;
+  }
+  @include responsive(tab-port) {
+    width: 50% !important;
+    right: 25%;
+  }
+  @include responsive(phone) {
+    width: 90% !important;
+    right: 1%;
+  }
+  h3 {
+    font-family: $boldFont;
+    @include responsive(big-desktop) {
+      font-size: 60px;
+    }
+    @include responsive(tab-land) {
+      font-size: 40px;
+    }
+    @include responsive(tab-port) {
+      font-size: 50px;
+    }
+    @include responsive(phone) {
+      font-size: 30px;
+    }
+    margin-bottom: 20px;
+  }
+  p {
+    font-family: $mainFont;
+    margin-bottom: 20px;
+    @include responsive(big-desktop) {
+      font-size: 30px;
+    }
+    @include responsive(tab-land) {
+      font-size: 24px;
+    }
+    @include responsive(tab-port) {
+      font-size: 27px;
+    }
+    @include responsive(phone) {
+      font-size: 20px;
+    }
+  }
+  button {
+    width: max-content;
+    color: #fff;
+    padding: 10px 20px;
+  }
+}
+.swiper-slider-container {
+  position: relative;
+}
+.swiper-slider-container.swiper-slider-container {
+  .swiper-button-prev:after,
+  .swiper-button-next:after {
+    display: none;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #000;
+    background-color: #fbfbfb;
+    border-radius: 5px;
+    opacity: 0.7;
+    height: 44px;
+    width: 44px;
+
+    @include responsive(big-desktop) {
+      top: 48%;
+    }
+
+    @include responsive(tab-land) {
+      top: 32%;
+    }
+    @include responsive(tab-port) {
+      top: 45%;
+    }
+    @include responsive(phone) {
+      display: none;
+    }
+  }
+  .swiper-button-prev {
+    left: 74px;
+  }
+  .swiper-button-next {
+    right: 98px;
+  }
+  .swiper-pagination {
+    text-align: center;
+    bottom: 100px;
+    right: 50%;
+    @include responsive(phone) {
+      bottom: 10px;
+    }
+    span {
+      padding: 6px;
+      margin: 4px;
+    }
+    .swiper-pagination-bullet-active {
+      background-color: #fff;
+      padding: 9px;
+    }
+  }
+}
+
+.homeFooter-container {
+  background-image: url("../../../assets/images/home-footer-bg.png");
+  background-size: cover;
+  color: white;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  .content {
+    position: relative;
+    z-index: 3;
+
+    .cards-container {
+      max-width: 800px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .card {
+      border: 2px solid;
+      transform: rotate(45deg);
+      width: 130px;
+      height: 130px;
+      margin: 0 2rem;
+      &:hover {
+        background-color: $secondColor;
+      }
+      &:nth-child(5),
+      &:nth-child(6),
+      &:nth-child(7) {
+        transform: rotate(45deg) translate(-10px, -10px);
+      }
+      @include responsive(phone) {
+        &:nth-child(5),
+        &:nth-child(6),
+        &:nth-child(7) {
+          transform: rotate(45deg);
+        }
+        margin: 2rem;
+      }
+      .card-content {
+        transform: rotate(-45deg);
+
+        img {
+          width: 40px;
+          height: 40px;
+        }
+
+        p {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}

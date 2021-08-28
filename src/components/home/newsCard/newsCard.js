@@ -28,9 +28,10 @@ const useStyles = makeStyles({
      },
     },
     "& p":{
-      height:"92px",
-      textOverflow:"ellipsis",
-      textOverflow:"hidden"
+      height: '99px',
+      textOverflow: 'ellipsis',
+      overflow: 'hidden',
+      marginBottom:' 10px',
     },
     "& .news_Category":{
       color:"#000",
@@ -69,7 +70,7 @@ function NewsCard({element}) {
               </Typography>
         </Link>
         <Typography className="news_Category"  variant="body2" color="textSecondary" component="h6">
-            Category
+            {element.cat}
         </Typography>
         <Typography  variant="body2" color="textSecondary" component="p">
           {element.description} 
@@ -77,7 +78,7 @@ function NewsCard({element}) {
 
         <Typography variant="body2" color="textSecondary" component="h6" gutterBottom className="d-flex align-items-center">
             <DateRangeIcon color="secondary"/> 
-             <span> {element.publishedAt &&  (element.publishedAt).slice(0,10)} </span>
+             <Box  ml="1rem"> {element.publishedAt &&  (element.publishedAt).slice(0,10)} </Box>
         </Typography>
        </CardContent>
        

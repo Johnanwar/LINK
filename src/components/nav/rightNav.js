@@ -38,25 +38,25 @@ function RightNav() {
               </div>
               <div className="right-nav-links-part">
               <Lenk className="right-nav-main-link" activeClassName='activLink'
-                    to="/" >
+                    to="/Aboutus" >
                     About Us
               </Lenk>
               <Link className="right-nav-links-link" to=""> Who Are Us</Link>
                </div>
               <div className="right-nav-links-part">
               <Lenk className="right-nav-main-link" activeClassName='activLink'
-                    to="/" >
+                    to="/News" >
                     News
               </Lenk>
               <Link className="right-nav-links-link" to="/News"> News</Link>
-              <Link className="right-nav-links-link"  to="">  Events</Link>
+              <Link className="right-nav-links-link"  to="Events">  Events</Link>
               </div>
               <div className="right-nav-links-part">
               <Lenk className="right-nav-main-link" activeClassName='activLink'
-                    to="/" >
+                    to="/Careers" >
                     Careers
               </Lenk>
-              <Link className="right-nav-links-link" to=""> Opportunites</Link>
+              <Link className="right-nav-links-link" to="/cc"> Opportunites</Link>
                </div>
               <Lenk className="right-nav-main-link" activeClassName='activLink'
                 to="/CareContactus" >

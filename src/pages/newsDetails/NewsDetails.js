@@ -27,7 +27,7 @@ function NewsDetails({match}) {
 
     
     return (
-        <section className="product-detail-container">
+        <article className="product-detail-container">
            <div className="container">
             <Breadcrumbs className="Breadcrumbs-container" aria-label="breadcrumb">
                     <Link color="primary" to="/" >
@@ -48,18 +48,16 @@ function NewsDetails({match}) {
                     <img src={itemDetails.urlToImage} />
                             <Box className="card-details-content">
                                 <Typography className="category-details" variant="body2" color="textSecondary" component="p">
-                                    Category Name
+                                  {itemDetails.cat}
                                </Typography>
-                                <Box display="flex" alignItems="center" className="justify-content-between">
+                                <Box display="flex" alignItems="center" className="justify-content-between article-details-header">
                                 <Typography  variant="h4" gutterBottom  component="h4">
                                     {itemDetails.title}
                                 </Typography>
-                                    
-                                
-                                    <Box display="flex" >
-                                        <AddToWishlist element={itemDetails}/>
-                                        <SosialShare/>
-                                    </Box>
+                                <Box display="flex" className="article-details-links">
+                                    <AddToWishlist element={itemDetails}/>
+                                    <SosialShare/>
+                                </Box>
                                 </Box>
                                 <Typography gutterBottom className="category-details" variant="body2" color="textSecondary" component="p">
                                   {itemDetails.content}
@@ -88,7 +86,7 @@ function NewsDetails({match}) {
                 } 
                 
              </div>
-        </section>
+        </article>
     )
 }
 

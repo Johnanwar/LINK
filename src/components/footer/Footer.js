@@ -34,20 +34,17 @@ function Footer() {
                </List>
              </Grid>
 
-             <Grid   item xs={10} sm={6} md={6} lg={5}>
+             <Grid   item xs={12} sm={12} md={6} lg={5}>
                  <form>
                      <label htmlFor="email">Subscribe to Newsletter</label>
                      <Box display="flex" flexWrap="wrap" alignItems="center" my=".5rem">
                          <input type="email" placeholder="Email Address" id="email" name="email" />
                             <button>Subscribe</button>
                      </Box>
-
-
                  </form>
              </Grid>
 
              <Grid   item xs={6} sm={6} md={6} lg={3}>
-            
              <div className="footer-social-icons">
              <p>
                  Follow Us On
@@ -66,7 +63,7 @@ function Footer() {
             </Box>
 
             <Box className="footer-bottom" py="1rem" display="flex" justifyContent="center">
-            <Typography variant="body1">All rights reserved - Link Development Company © 2020</Typography>
+            <Typography variant="body2">All rights reserved - Link Development Company © 2020</Typography>
             </Box>
 
         </footer>

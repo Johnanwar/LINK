@@ -1,6 +1,6 @@
 import React, {useState } from "react"
 import { Link } from "react-router-dom"
-import { Menu ,AppBar, Toolbar, Box ,Paper} from '@material-ui/core'
+import { Badge ,AppBar, Toolbar, Box ,Paper} from '@material-ui/core'
 //////////////////////////images from assets folder
 import logo from "../../assets/images/logo.png"
 import profilePic from "../../assets/images/profile.png"
@@ -11,7 +11,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import NotificationsNoneIcon from '@material-ui/icons/NotificationsNone';
 import SettingsOutlinedIcon from '@material-ui/icons/SettingsOutlined';
 import ClearIcon from '@material-ui/icons/Clear';
-///////////////////////// components
+ ///////////////////////// components
 import Setting from "./setting"
 import Notfications from "./notfications"
 import RightNav from "./rightNav"
@@ -53,7 +53,10 @@ export default  function Nav() {
           )}
           {/* /////////////////////// seaNotification component */}
           <div className = "relative">
-           <a onClick={()=>setShowNotfication(!showNotfication)} className={ showNotfication ?(`Setting-icon `) :(`Setting-icon setting-hover`)}> <NotificationsNoneIcon/> <span> Notfication </span></a>
+           <a onClick={()=>setShowNotfication(!showNotfication)} className={ showNotfication ?(`Setting-icon `) :(`Setting-icon setting-hover`)}>
+               <NotificationsNoneIcon/>
+             
+           <span> Notfication </span></a>
            {showNotfication && <Notfications/> }
            
           </div>
