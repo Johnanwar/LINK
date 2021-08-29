@@ -40,7 +40,7 @@ function NewsDetails({match}) {
                         News Details
                     </Link>
               </Breadcrumbs>
-              <Header variant="h3">
+              <Header>
                  News Details
               </Header>
                 {itemDetails && 

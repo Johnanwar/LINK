@@ -16,7 +16,7 @@ export const socialIcons = [
   {id:5 , icon: <InstagramIcon/>     ,link:"InstagramIcon.com"},
 ]
 
-function RightNav() {
+function SidetNav() {
        return (
        
         <div className="right-nav-container">
@@ -74,4 +74,4 @@ function RightNav() {
     )
 }
 
-export default RightNav
+export default SidetNav

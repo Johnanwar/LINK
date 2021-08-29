@@ -4,11 +4,9 @@ import {  makeStyles, Typography} from '@material-ui/core';
 const useStyles = makeStyles(theme => ({
     root: {
 
-        margin: "15px 0 20px 0",
+        margin: "20px 0",
         paddingBottom:'5px',
         fontWeight:'600',
-        // fontFamily:"Open-Sans",
-        
     }
 }))
 
@@ -19,7 +17,7 @@ function Header(props) {
     return (
          <Typography
         className={classes.root}
-           variant={variant || "h2"}
+           variant={variant || "h4"}
          >
               {children}
         </Typography>

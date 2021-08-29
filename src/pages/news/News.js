@@ -42,7 +42,7 @@ function News() {
                   </Link>
                 
           </Breadcrumbs>
-          <Header variant="h3">
+          <Header>
                   News 
           </Header>
           <Grid   container spacing={4}>       

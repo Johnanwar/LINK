@@ -4,8 +4,8 @@ import {ThemeProvider , createTheme } from '@material-ui/core';
  import '../../styles/scss/main.scss'
 
 ////////////// layout components
-import Nav from"../../components/nav/nav";
-import Footer from "../../components/footer/Footer"
+import Nav from"../../components/layout/nav/nav";
+import Footer from "../../components/layout/footer/Footer"
 //////////////pages
 import Home from "../home/Home";
 import NewsDetails from "../newsDetails/NewsDetails";

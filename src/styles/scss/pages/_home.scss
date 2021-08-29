@@ -1,5 +1,6 @@
 .slide-design {
   position: relative;
+  overflow: hidden;
   @include responsive(big-desktop) {
     height: 620px;
   }
@@ -200,3 +201,18 @@
     }
   }
 }
+.share-icons-container{
+  position: absolute;
+  bottom: 0;
+  position: absolute;
+  right: 12px;
+  display: flex;
+  top: 38px;
+ }
+.transition-share{
+    transform: scale(.6) ;
+}
+.share-icon{
+  transition: .5s!important;
+}
+ 

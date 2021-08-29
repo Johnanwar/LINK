@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Grid, List, Typography, ListItemText, Box} from '@material-ui/core';
 import { Link } from "react-router-dom"
-import {socialIcons} from "../nav/rightNav"
+import {socialIcons} from "../sideNav/sideNav"
 function Footer() {
     const Firstlinks=[
         {id:1 , link:"News"  , text:"News"},
@@ -39,7 +39,7 @@ function Footer() {
                      <label htmlFor="email">Subscribe to Newsletter</label>
                      <Box display="flex" flexWrap="wrap" alignItems="center" my=".5rem">
                          <input type="email" placeholder="Email Address" id="email" name="email" />
-                            <button>Subscribe</button>
+                            <button onClick={(e)=>( e.preventDefault())}>Subscribe</button>
                      </Box>
                  </form>
              </Grid>

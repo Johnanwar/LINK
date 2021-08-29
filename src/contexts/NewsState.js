@@ -45,10 +45,15 @@ export const NewsProvider = ({ children }) => {
             catArray.push(item)
             }
           })
-         })
+         });
+        //  sort array desending
+         const sortedArray = catArray.sort(function(a,b){
+           return new Date(b.publishedAt) - new Date(a.publishedAt) ;
+        });
+        console.log(sortedArray)
           dispatch({
             type: GET_NEWS,
-            payload: catArray
+            payload: sortedArray
           })
           })
         })

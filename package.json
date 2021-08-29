@@ -20,8 +20,6 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-share": "^4.4.0",
-    "signalr-client-react": "^0.2.1",
-    "signalr-no-jquery": "^0.2.0",
     "swiper": "^6.8.4",
     "web-vitals": "^1.1.2"
   },

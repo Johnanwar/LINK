@@ -2,9 +2,9 @@ import React, {useState } from "react"
 import { Link } from "react-router-dom"
 import { Badge ,AppBar, Toolbar, Box ,Paper} from '@material-ui/core'
 //////////////////////////images from assets folder
-import logo from "../../assets/images/logo.png"
-import profilePic from "../../assets/images/profile.png"
-import menu from "../../assets/images/Menu.svg"
+import logo from "../../../assets/images/logo.png"
+import profilePic from "../../../assets/images/profile.png"
+import menu from "../../../assets/images/Menu.svg"
 
 //////////////////////////icons from materialui
 import SearchIcon from '@material-ui/icons/Search';
@@ -14,7 +14,7 @@ import ClearIcon from '@material-ui/icons/Clear';
  ///////////////////////// components
 import Setting from "./setting"
 import Notfications from "./notfications"
-import RightNav from "./rightNav"
+import SidetNav from "../sideNav/sideNav"
 
 
 export default  function Nav() {
@@ -31,26 +31,37 @@ export default  function Nav() {
         <Toolbar class="nav-container d-flex justify-content-between align-items-center">
         <Box display="flex" alignItems="center">
         {showRighNav? (
-          <ClearIcon onClick={()=>setShowRighNav(!showRighNav)} style={{cursor:"pointer"}}/>
+          <ClearIcon className="menuIcon" onClick={()=>setShowRighNav(!showRighNav)} style={{cursor:"pointer"}}/>
           ) : (
-          <img onClick={()=>setShowRighNav(!showRighNav)} src={menu}/>
+          <img className="menuIcon" onClick={()=>setShowRighNav(!showRighNav)} src={menu}/>
           )}
-          {showRighNav && <RightNav/> }
+          {showRighNav && <SidetNav/> }
           <Link to= "/"> <img className="logo-img" alt="logo"  src={logo}/></Link>
         </Box>
         
           <div className = "d-flex align-items-center justify-content-around nav_header_links">
           {/* /////////////////////// search component */}
-           {showSerash? (
+
+          <div className = "relative">
+           <a onClick={()=>setShowSearch(!showSerash)} className={ showSerash ?(`Setting-icon`) :(`Setting-icon search-hover`)}>
+              <SearchIcon/>
+             
+           <span> Search </span></a>
+           {showSerash &&
+            <div className="Search-container"> 
+              <input placeholder="Search" type="Search"/>   
+            </div>
+            }
+           
+          </div>
+
+           {/* {showSerash? (
            <div className="Search-containe-main"> 
-              <div className="Search-container"> 
-              <input placeholder="Searsh" type="search"/>   
-                <a  onClick={()=>setShowSearch(!showSerash)} className=" Search-icon"> <SearchIcon/></a>
-              </div>
+            
           </div>
           ) :(      
             <a onClick={()=>setShowSearch(!showSerash)} className="Icon Search-icon"> <SearchIcon/> <span> Search </span> </a>
-          )}
+          )} */}
           {/* /////////////////////// seaNotification component */}
           <div className = "relative">
            <a onClick={()=>setShowNotfication(!showNotfication)} className={ showNotfication ?(`Setting-icon `) :(`Setting-icon setting-hover`)}>

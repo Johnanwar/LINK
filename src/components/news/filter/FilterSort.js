@@ -1,4 +1,4 @@
-import React from 'react'
+import React  from 'react'
 import { Grid}   from '@material-ui/core';
 import Select from "../../../controls/select"
 //// global state
@@ -12,26 +12,28 @@ function FilterSort() {
       {id:"A to Z", name:"A to Z"},
       {id: "Z to A", name:"Z to A"},
      ]
-     const sortData = e =>{
-      console.log(e.target.value)
-      const desData = news.NewItems
-      .sort(function(a, b) {
-       if(a.title.toLowerCase() > b.title.toLowerCase()) return -1;
-       if(a.title.toLowerCase() < b.title.toLowerCase()) return 1;
-       return 0;
-      })
+     const sortData = e =>{ 
+
         if(e.target.value == "Z to A") {
+          const desData = news.NewItems
+          .sort(function(a, b) {
+           if(a.title > b.title) return -1;
+           else {
+            return 1;
+           } 
+           })
          dispatch({
            type: SORT_DES,
            payload:desData
          })
          }
          else if(e.target.value == "A to Z"){
-           const accData = news.NewItems
-           .sort(function(a, b) {
-            if(a.title.toLowerCase() < b.title.toLowerCase()) return -1;
-            if(a.title.toLowerCase() > b.title.toLowerCase()) return 1;
-            return 0;
+          const accData = news.NewItems
+          .sort(function(a, b) {
+            if(a.title > b.title) return 1;
+           else {
+            return -1;
+           } 
            })
          dispatch({
            type: SORT_ACC,
@@ -40,6 +42,8 @@ function FilterSort() {
        }
      }
  
+
+    
   
     return (
         <>

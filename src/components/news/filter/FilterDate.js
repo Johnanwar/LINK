@@ -10,7 +10,7 @@ function FilterDate() {
     {
       fromDate: "",
       toDate: "",
-    } );
+    } ); 
   const sortByDate = e=> {
     const { name, value } = e.target
     setDateValues({

@@ -21,7 +21,7 @@ function Notfications() {
               
             ))}
             <Link className="black view-all-notfications" to="/notfication">  
-              <Typography color="secondary"    variant="h6" component="h2" m={2}>
+              <Typography color="secondary"    variant="p" component="h3" m={2}>
                 All Notifications
               </Typography> 
               <ArrowRightAltIcon color="secondary"/>   

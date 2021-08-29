@@ -30,9 +30,22 @@ export const reducer = (state, action) => {
         return {
           ...state,
           WishList: [...state.WishList, action.payload],
-          NewItems: [...newsResult, action.payload], 
+          // NewItems: [...newsResult, action.payload], 
           // filteredItems: [...newsResult, action.payload],
         }
+                ///////////////////////////////////////////////////////////////////////////////////////
+
+      case REMOVE_FROM_WISHLIST: {
+        const result = state.WishList.filter(
+          (item) => item.id !== action.payload.id)
+          const newsResult = state.NewItems.filter(
+            (item) => item.id !== action.payload.id)
+        return {
+          ...state,
+          WishList: result,     
+          // NewItems: [...newsResult, action.payload],        
+         };
+       }
          ////////////////////////////////////////////////////// SORT_ACC
         case SORT_ACC: {
         const result = state.WishList.filter(
@@ -52,6 +65,7 @@ export const reducer = (state, action) => {
         return {
           ...state,
           NewItems:action.payload,
+          filteredItems:action.payload,
         }
 
       ///////////////////////////////////////////////////////////// SORT_DES
@@ -59,6 +73,7 @@ export const reducer = (state, action) => {
         return {
           ...state,
           NewItems:action.payload,
+          filteredItems:action.payload,
         }
 
           ///////////////////////////////////////////////////////////// FILTER_DATE
@@ -77,7 +92,7 @@ export const reducer = (state, action) => {
        case SEARCH_FILTER: 
         let allNewsToSearsh  = [...state.NewItems];     
        const results = allNewsToSearsh.filter(x  =>
-        x.title.toLowerCase().includes(action.payload)
+        x.title.includes(action.payload)
       );        
         return {
           ...state,
